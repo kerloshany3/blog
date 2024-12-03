@@ -2,11 +2,12 @@
 import Image from "next/image";
 import React, { useEffect, useState } from 'react'
 import { getArticlsData } from "../api";
+import { useRouter } from "next/navigation";
+
+
 
 const Articls = () => {
-
     const [Articls, setArticls] = useState([])
-
     useEffect(() => {
         getArticls()
     }, [])
@@ -18,21 +19,18 @@ const Articls = () => {
         })
     }
 
+    const router = useRouter()
+    const handleClickButton = ( item) => {
+        
+        router.push(`${item.slugofart}`)
+    }
     const baseurl = "http://localhost:3000/"
 
     return (
         <div>
             <div>
                 <div className="">
-                    <div
                         
-                        style={{
-                            backgroundImage: "url('https://myshoproject.vercel.app/logo.svg')",
-                            backgroundSize: "cover", // Ensures the image covers the text
-                            backgroundPosition: "80% 25%",
-                            backgroundSize: "200%",// Custom position
-                          }} className=" bg-cover rounded-2xl  bg-center m-6 p-1" >
-                      
                         <ul className=" grid grid-cols-3 ">
                             {Articls.map((item) => (
                                 <li key={item.id}>
@@ -42,8 +40,7 @@ const Articls = () => {
                                         <p className=" text-white/70 font-Abrial line-clamp-2 ">{item.description}</p>
 
                                         <div className=" flex justify-between  place-items-center">
-                                            <button className=" shadow-xl shadow-primary2/50 bg-primary2 text-white font-Abrial text-2xl p-2 rounded-xl my-3">Read More</button>
-
+                                            <button onClick={()=>{handleClickButton(item)}} className=" shadow-xl shadow-primary2/50 bg-primary2 text-white font-Abrial text-2xl p-2 rounded-xl my-3">Read More</button>
                                             {item.isLive ? 
                                             <svg xmlns="http://www.w3.org/2000/svg" className="" width="40" height="40" viewBox="0 0 24 24">
                                             <mask id="lineMdSpeedTwotoneLoop0">
@@ -74,7 +71,7 @@ const Articls = () => {
                         </ul>
 
                     </div>
-                </div>
+                
             </div>
         </div>
     )
