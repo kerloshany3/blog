@@ -2,7 +2,7 @@ import request, { gql } from "graphql-request"
 import { funofdatart } from "../[articleid]/page"
 
 
-const MASTER_URL = "https://ap-south-1.cdn.hygraph.com/content/cm482x6a502j207w6ujty7gg4/master"
+const MASTER_URL = process.env.NEXT_PUBLIC_HYGRAPH_KEY
 
 
 export const getArticlsData = async () => {
