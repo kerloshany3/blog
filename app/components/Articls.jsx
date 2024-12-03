@@ -24,13 +24,13 @@ const Articls = () => {
         <div>
             <div>
                 <div className="">
-                    <div className="  border-4  m-6 p-1">
-                        <ul>
+                    <div className="  border-4    m-6 p-1">
+                        <ul className=" grid grid-cols-3 ">
                             {Articls.map((item) => (
                                 <li key={item.id}>
-                                    <div className=" shadow-xl shadow-primary5/40 bg-primary5 max-xl:w-1/3 w-1/4 p-6 rounded-xl">
+                                    <div className=" shadow-xl m-4 shadow-primary5/40 bg-primary5 w-fit p-6 rounded-xl">
                                         <Image className=" rounded-2xl shadow-xl w-fit scale-110 py-5 flex m-auto justify-center" src={item.image.url} width={200} height={300} alt="image"></Image>
-                                        <h4 className=" font-Abrial text-white text-3xl">{item?.title}</h4>
+                                        <h4 className=" font-Abrial text-white text-3xl line-clamp-2">{item?.title}</h4>
                                         <p className=" text-white/70 font-Abrial line-clamp-2 ">{item.description}</p>
 
                                         <div className=" flex justify-between  place-items-center">
