@@ -24,8 +24,7 @@ const Articls = () => {
         
         router.push(`${item.slugofart}`)
     }
-    const baseurl = "http://localhost:3000/"
-
+    
     return (
         <div>
             <div>
