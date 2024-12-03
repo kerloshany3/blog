@@ -24,7 +24,15 @@ const Articls = () => {
         <div>
             <div>
                 <div className="">
-                    <div className="  border-4    m-6 p-1">
+                    <div
+                        
+                        style={{
+                            backgroundImage: "url('https://myshoproject.vercel.app/logo.svg')",
+                            backgroundSize: "cover", // Ensures the image covers the text
+                            backgroundPosition: "80% 25%",
+                            backgroundSize: "200%",// Custom position
+                          }} className=" bg-cover rounded-2xl  bg-center m-6 p-1" >
+                      
                         <ul className=" grid grid-cols-3 ">
                             {Articls.map((item) => (
                                 <li key={item.id}>
