@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 import ArticleDetils from "../components/ArticleDetils"
 
-const MASTER_URL = process.env.NEXT_PUBLIC_HYGRAPH_KEY
+const MASTER_URL = "https://ap-south-1.cdn.hygraph.com/content/cm482x6a502j207w6ujty7gg4/master"
 
 
 const page = ({ params }) => {
