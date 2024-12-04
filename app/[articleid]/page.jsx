@@ -26,6 +26,7 @@ const page = ({ params }) => {
         image {
           url
         }
+        id
         isLive
         slugofart
         title

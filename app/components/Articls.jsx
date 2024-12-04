@@ -30,13 +30,13 @@ const Articls = () => {
             <div>
                 <div className="">
                         
-                        <ul className=" grid grid-cols-3 ">
+                        <ul className=" max-sm:grid-cols-1 grid grid-cols-3 ">
                             {Articls.map((item) => (
                                 <li key={item.id}>
-                                    <div className=" shadow-xl m-4 shadow-primary5/40 bg-primary5 w-fit p-6 rounded-xl">
+                                    <div className="  shadow-xl m-4 shadow-primary5/40 bg-primary5 w-fit p-6 rounded-xl">
                                         <Image className=" rounded-2xl shadow-xl w-fit scale-110 py-5 flex m-auto justify-center" src={item.image.url} width={200} height={300} alt="image"></Image>
-                                        <h4 className=" font-Abrial text-white text-3xl line-clamp-2">{item?.title}</h4>
-                                        <p className=" text-white/70 font-Abrial line-clamp-2 ">{item.description}</p>
+                                        <h4 className="   font-Abrial text-white text-3xl line-clamp-2">{item?.title}</h4>
+                                        <p className="  text-white/70 font-Abrial line-clamp-2 ">{item.description}</p>
 
                                         <div className=" flex justify-between  place-items-center">
                                             <button onClick={()=>{handleClickButton(item)}} className=" shadow-xl shadow-primary2/50 bg-primary2 text-white font-Abrial text-2xl p-2 rounded-xl my-3">Read More</button>
