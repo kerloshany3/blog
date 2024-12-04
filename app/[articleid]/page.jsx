@@ -31,6 +31,7 @@ const page = ({ params }) => {
         slugofart
         title
         publishedAt
+        youtubeUrl
       }
     }
         `

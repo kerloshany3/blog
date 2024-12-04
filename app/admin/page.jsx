@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import request, { gql } from 'graphql-request';
+import UploadPhoto from '../components/UploadPhoto';
 
 const Page = () => {
     const MASTER_URL =
@@ -123,6 +124,7 @@ const Page = () => {
                 <p className="font-light text-3xl text-white font-Abrial  mt-3">{publishMessage}</p>
             )}
 
+            <UploadPhoto></UploadPhoto>
 
         </div>
     );
